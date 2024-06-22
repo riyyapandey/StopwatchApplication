@@ -1,0 +1,98 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://source.unsplash.com/random/1600x900') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stopwatch {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#display {
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    color: #333;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+}
+
+.controls .btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background: #ff7e5f;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.controls .btn:hover {
+    background: #feb47b;
+    transform: scale(1.05);
+}
+
+.controls .btn:active {
+    transform: scale(0.95);
+}
+
+.laps {
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.lap {
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #333;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    #display {
+        font-size: 2.5em;
+    }
+
+    .controls .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
